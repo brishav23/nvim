@@ -1,0 +1,145 @@
+snippet inline "inline math" i
+$${VISUAL}$1$
+endsnippet
+
+snippet mathline "equation"
+$$${VISUAL}$1$$
+endsnippet
+
+snippet fint "definite integral" i
+\int_{$1}^{$2}$0
+endsnippet
+
+snippet "(.+)," "new element in row" r
+`!p
+snip.rv = match.group(1).split(',')[0] + " & "
+`
+endsnippet
+
+snippet "(.+);" "full row" r
+`!p
+split = re.split(r',\s*', match.group(0))
+for i in range(len(split)-1):
+	snip.rv += split[i] + " & "
+snip.rv += split[len(split)-1].split(';')[0] + " \\\\"
+`
+endsnippet
+
+
+snippet bmat "brackets matrix" i
+\begin{bmatrix}$1\end{bmatrix}
+endsnippet
+
+snippet Bmat "braces matrix" i
+\begin{Bmatrix}$1\end{Bmatrix}
+endsnippet
+
+snippet pmat "parenthesis matrix" i
+\begin{pmatrix}$1\end{pmatrix}
+endsnippet
+
+snippet vec "vector" i
+\vec{${VISUAL}$1}$0
+endsnippet
+
+snippet \text "text in math" i
+\text{${VISUAL}$1}$0
+endsnippet
+
+snippet \choose "combinations" i
+\binom{${VISUAL}$1}{$2}$0
+endsnippet
+
+snippet sub "subscript both sides" i
+{$1}_{$2}$0
+endsnippet
+
+snippet sum "summation" i
+\sum_{$1}^{$2}{$3}$0
+endsnippet
+
+snippet frac "fraction" i
+\frac{$1}{$2}$0
+endsnippet
+
+snippet "([0-9a-zA-Z]+)\/([0-9a-zA-Z]+)" "autofraction" ir
+`!p
+snip.rv = "\\frac{" + match.group(1) + "}{" + match.group(2) + "}"
+`
+endsnippet
+
+
+snippet bar "bar" i
+\bar{${VISUAL}$1}$0
+endsnippet
+
+snippet sqrt "square root" i
+\sqrt{${VISUAL}$1}$0
+endsnippet
+
+snippet tabular "centered table" i
+\begin{center}
+\begin{tabular}{${1:alignment}}
+${2:contents}
+\end{tabular}
+\end{center}
+endsnippet
+
+snippet align "align" b
+\begin{aligned}
+	${VISUAL}$1
+\end{aligned}$0
+endsnippet
+
+snippet bm "bold math" i
+\pmb{${VISUAL}$1}$0
+endsnippet
+
+snippet "(_[0-9a-zA-Z]+)([,\s;]+)" "quick subscript" riA
+`!p
+snip.rv = "_{" + match.group(1).split('_')[1] + "}" + match.group(2)
+`
+endsnippet
+
+snippet "([a-zA-Z]+)(\d+)([,\s;]+)" "auto subscript" riA
+`!p
+snip.rv = "{" + match.group(1) + "}_{" + match.group(2) + "}" + match.group(3)
+`
+endsnippet
+
+snippet \set "set" i
+\left\\{${VISUAL}$1\right\\}$0
+endsnippet
+
+snippet | "mid or pipe" i
+\mid
+endsnippet
+
+snippet nullset "null set" i
+\varnothing
+endsnippet
+
+snippet abs "absolute value" i
+|${VISUAL}$1|$0
+endsnippet
+
+snippet pow "power" i
+{$1}^{$2}$0
+endsnippet
+
+snippet floor "floor" i
+\\left\\lfloor ${VISUAL}$1 \\right\\rfloor$0
+endsnippet
+
+snippet ceil "ceiling" i
+\\left\\lceil ${VISUAL}$1 \\right\\rceil$0
+endsnippet
+
+snippet prod "product" i
+\\prod_{$1}^{$2}{${VISUAL}$3}$0
+endsnippet
+
+snippet log "log" i
+\\log_{$1}{${VISUAL}$2}$0
+endsnippet
+

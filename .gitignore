@@ -1,0 +1,10 @@
+*
+
+!/.gitignore
+!/README.md
+
+!/UltiSnips
+!/UltiSnips/*
+
+!/after
+!/after/*

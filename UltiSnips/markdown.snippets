@@ -1,0 +1,33 @@
+extends math
+
+snippet init "initialize" b
+---
+geometry: margin=1in
+header-includes: \usepackage{graphicx}
+---$0
+endsnippet
+
+snippet it "italics" i
+*${VISUAL}$1*$0
+endsnippet
+
+snippet bf "bold" i
+**${VISUAL}$1**$0
+endsnippet
+
+snippet includegraphics "include graphics" b
+\begin{center}
+\includegraphics[width=0.7\linewidth]{$1{./src/image.png}}
+\end{center}$0
+endsnippet
+
+snippet icode "inline code" i
+\`\`\`${VISUAL}$1\`\`\`$0
+endsnippet
+
+snippet mcode "multiline code" i
+\`\`\`$1
+${VISUAL}$2
+\`\`\`$0
+endsnippet
+

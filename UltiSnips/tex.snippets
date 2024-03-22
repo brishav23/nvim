@@ -1,0 +1,100 @@
+extends math
+
+snippet init "Make the beginning" b
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage[indLines=true]{algpseudocodex}
+
+\title{${1:title}}
+\date{${2:date}}
+\author{${3:name}}
+
+\begin{document}
+\maketitle
+$4
+\end{document}
+endsnippet
+
+snippet # "section" b
+\section*{$1}$0
+endsnippet
+
+snippet ## "subsection" b
+\subsection*{$1}$0
+endsnippet
+
+snippet ### "subsubsection" b
+\subsubsection*{$1}$0
+endsnippet
+
+snippet center "centering block" b
+\begin{center}
+${VISUAL}$1
+\end{center}$0
+endsnippet
+
+snippet includegraphics "include graphics" b
+\begin{center}
+\includegraphics[${1:width=0.7\linewidth}]{${2:./src/image.png}}
+\end{center}$0
+endsnippet
+
+snippet bf "boldface" i
+\textbf{${VISUAL}$1}$0
+endsnippet
+
+snippet it "italics" i
+\textit{${VISUAL}$1}$0
+endsnippet
+
+snippet ul "underline" i
+\underline{${VISUAL}$1}$0
+endsnippet
+
+snippet verbatim "verbatim" b
+\begin{verbatim}
+$1
+\end{verbatim}
+endsnippet
+
+snippet uol "unordered list" b
+\begin{itemize}
+	\item{$1}$2
+\end{itemize}$0
+endsnippet
+
+snippet ol "ordered list" b
+\begin{enumerate}
+	\item{$1}$2
+\end{enumerate}$0
+endsnippet
+
+snippet - "list element" 
+\item{$1}$0
+endsnippet
+
+snippet bb "blacboard bold" i
+\mathbb{${VISUAL}$1}$0
+endsnippet
+
+snippet boxed "boxed" i
+\\boxed{${VISUAL}$1}$0
+endsnippet
+
+snippet lr() "left-right parentheses" i
+\left(${VISUAL}$1\right)$0
+endsnippet
+
+snippet lr[] "left-right brackets" i
+\left[${VISUAL}$1\right]$0
+endsnippet
+
+snippet lr{} "left-right brackets" i
+\left\{${VISUAL}$1\right\}$0
+endsnippet

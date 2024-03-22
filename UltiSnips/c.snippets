@@ -1,0 +1,22 @@
+snippet includeguard "include guard" b
+#ifndef $1
+#define $1
+$2
+#endif$0
+endsnippet
+
+snippet init "standard includes" b
+#include <stdio.h>
+#include <stdlib.h>
+endsnippet
+
+snippet inc "include" b
+#include <${VISUAL}$1>$0
+endsnippet
+
+snippet main "main method" b
+int main(int argc, char **argv) {
+	$1
+}
+endsnippet
+
