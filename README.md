@@ -15,6 +15,18 @@ vim | neovim
 `~/.config/nvim` | `~/.vim`
 `~/.config.nvim/init.vim` | `~/.vim/vimrc`
 
+## Python integration and UltiSnips
+
+For UltiSnips to work, neovim needs to be able to find python.
+The simplest way to accomplish this is to first create a python virtualenv
+with the neovim module (run `pip install neovim`) and then setting:
+
+```
+let g:python3_host_prog = '/full/path/to/virtualenv/python'
+```
+
+in the `init.vim` file.
+
 ## Language Servers
 
 I use the `nvim-lspconfig` [plugin](https://github.com/neovim/nvim-lspconfig) to get some easy-to-use
