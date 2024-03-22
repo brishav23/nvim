@@ -33,3 +33,8 @@ I use the `nvim-lspconfig` [plugin](https://github.com/neovim/nvim-lspconfig) to
 configurations for common language servers so I don't have to deal with configuring them from scratch myself.
 The language servers seem to mostly just work and overwrite the normal vim keybinds I would use perfectly.
 Auto-complete is triggered _in insert mode_ by using `<C-x><C-o>`.
+
+I have an example of how to use a pre-made configuration from `nvim-lspconfig`
+with a Java language server (`jdtls`) in the `init.vim` file.
+For any new language servers you want to use, you should add the config to
+the `init.vim` file in a similar manner.
