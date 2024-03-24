@@ -8,3 +8,5 @@
 
 !/after
 !/after/*
+
+!/*.vim
