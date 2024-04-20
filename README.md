@@ -13,7 +13,7 @@ vim | neovim
 --- | ---
 `~/.vim/bundle` | `~/.local/share/nvim/lazy`
 `~/.vim` | `~/.config/nvim`
-`~/.vim/vimrc` | `~/.config.nvim/init.vim`
+`~/.vim/vimrc` | `~/.config/nvim/init.vim`
 
 ## Python integration and UltiSnips
 
