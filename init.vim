@@ -39,6 +39,8 @@ let g:vimtex_view_method = 'skim' "" Choose which program to use to view PDF fil
 let g:vimtex_view_general_viewer = 'skim'
 let g:vimtex_compiler_method = 'latexmk'
 
+let g:dracula_colorterm = 0
+
 syntax on
 set number
 colorscheme dracula
@@ -67,4 +69,5 @@ lua << EOF
 local lspconfig = require('lspconfig')
 lspconfig.jdtls.setup {}
 lspconfig.texlab.setup {}
+lspconfig.rust_analyzer.setup {}
 EOF
