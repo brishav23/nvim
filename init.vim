@@ -18,6 +18,8 @@ require("lazy").setup({
   {'dracula/vim', name = 'dracula'},
   'lervag/vimtex',
   'neovim/nvim-lspconfig',
+  'junegunn/fzf',
+  'junegunn/fzf.vim',
 })
 EOF
 
