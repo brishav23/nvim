@@ -95,13 +95,13 @@ snippet bm "bold math" i
 \pmb{${VISUAL}$1}$0
 endsnippet
 
-snippet "(_[0-9a-zA-Z]+)([,\s;]+)" "quick subscript" riA
+snippet "(_[0-9a-zA-Z]+)([,\s;]+)" "quick subscript" ri
 `!p
 snip.rv = "_{" + match.group(1).split('_')[1] + "}" + match.group(2)
 `
 endsnippet
 
-snippet "([a-zA-Z]+)(\d+)([,\s;]+)" "auto subscript" riA
+snippet "([a-zA-Z]+)(\d+)([,\s;]+)" "auto subscript" ri
 `!p
 snip.rv = "{" + match.group(1) + "}_{" + match.group(2) + "}" + match.group(3)
 `
